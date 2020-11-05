@@ -1,4 +1,3 @@
-# Eventos
-Projeto Eventos tem como intuito oferecer um app para cadastro de eventos e inscrições nos eventos.
+# API Rest
 
-O projeto conta com uma API Rest desenvolvida em Nodejs com TypeScript.
+API desenvolvida para oferecer recursos de cadastro de eventos e inscrições de participantes.
