@@ -11,7 +11,7 @@ class EventsController{
       return response.status(400).json({message: 'Event not found.'});
     }
 
-    const insc = await knex('insc_event').join('event_users', 'insc_event.id', '=' , 'event_users.insc_id').where('event_users.event_id', id).select('insc_event.name','insc_event.email', 'insc_event.dt_nasc')
+    const insc = await knex('insc_event').join('event_users', 'insc_event.id', '=' , 'event_users.insc_id').where('event_users.event_id', id).select('insc_event.name','insc_event.email', 'insc_event.dt_nasc').orderBy('insc_event.name');
 
     return response.json({event, insc});
   }

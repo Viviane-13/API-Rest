@@ -4,7 +4,7 @@ import {Request, Response} from 'express'
 class InscController{
   async index (request: Request, response: Response) {
     const insc_events = await knex('insc_event').select('*');
-  
+    
     const serializedInsc = insc_events.map(insc_events =>{
       return{
         name: insc_events.name,
@@ -31,7 +31,7 @@ class InscController{
     email,
     dt_nasc
  }
-  
+
    const insertedIds = await trx('insc_event').insert(insc);
   
    const insc_id = insertedIds[0];
