@@ -7,6 +7,7 @@ class InscController{
     
     const serializedInsc = insc_events.map(insc_events =>{
       return{
+        
         name: insc_events.name,
         email: insc_events.email,
         dt_nasc: insc_events.dt_nasc
