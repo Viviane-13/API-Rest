@@ -27,7 +27,7 @@ class EventsController{
       description,
       dt_init,
       dt_fin,
-      qtd_vgs
+      qtd_vgs,
     } = request.body;
   
     await knex('events').insert({
